@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const yargs = require('yargs/yargs')
 const ora = require('ora')
 const chalk = require('chalk')
