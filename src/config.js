@@ -4,7 +4,7 @@ const { homedir } = require('os')
 const configFolder =
   process.env.MODE === 'dev'
     ? path.join(__dirname, '../.rvn')
-    : path.join(__dirname, homedir(), '.rvn')
+    : path.join(homedir(), '.rvn')
 
 const configFilename = path.join(configFolder, 'config.json')
 
