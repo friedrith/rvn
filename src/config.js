@@ -20,9 +20,15 @@ const save = config => fs.writeFile(configFilename, JSON.stringify(config))
 
 const load = async () => JSON.parse(await fs.readFile(configFilename, 'utf8'))
 
+const show = () => ({
+  mode: process.env.MODE,
+  path: configFolder,
+})
+
 module.exports = {
   configFolder,
   start,
   save,
   load,
+  show,
 }

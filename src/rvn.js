@@ -18,6 +18,10 @@ const { argv } = yargs(process.argv.slice(2))
     type: 'boolean',
     description: 'Index all readme files of your repositories',
   })
+  .option('config', {
+    type: 'boolean',
+    description: 'Show the current config used',
+  })
   .option('token', {
     type: 'string',
     description: 'Change your github token',
@@ -94,8 +98,14 @@ const search = async () => {
 const rvn = async () => {
   await config.start()
 
+  if (argv.config) {
+    console.log(config.show())
+    return
+  }
+
   if (argv.version) {
     console.log(version)
+    return
   }
 
   if (argv.token) {
