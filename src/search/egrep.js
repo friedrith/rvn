@@ -14,6 +14,7 @@ const search = query =>
         pattern: new RegExp(query, 'i'),
         files: [dbFolder],
         recursive: true,
+        ignoreCase: true,
       })
 
       const results = []

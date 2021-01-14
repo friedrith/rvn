@@ -14,6 +14,22 @@ npm install -g rvn
 rvn
 ```
 
+## Development
+
+If you want to develop for rvn
+
+```bash
+
+yarn install
+./src/rvn
+```
+
+You can also configure rvn to use a local configuration file by create a file _.env_ next to the file package.json with the content:
+
+```
+MODE=dev
+```
+
 ## Links
 
 ### Terminal
